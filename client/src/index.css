@@ -2,12 +2,20 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+  background-color: #2c2c2e !important;
 }
 .container {
   height: auto;
 }
 #input, #output {
   width: 35vw;
+  resize: none;
+  border: 2px solid #454545 !important;
+  background-color: #2c2c2e !important;
+  color: #b8b8b8 !important;
+}
+#input-mob, #output-mob {
+  width: 80vw;
   resize: none;
 }
 .button-container {
@@ -19,4 +27,17 @@ body {
 }
 .select {
   min-width: 150px;
+}
+.ant-select-selector {
+  border: 2px solid #454545 !important;
+  background-color: #2c2c2e !important;
+}
+.ant-select-arrow {
+  color: #454545 !important; 
+}
+button:disabled,
+button[disabled] {
+  background-color: #2c2c2e !important;
+  border: 1px solid #454545 !important;
+  color: #b8b8b8 !important;
 }

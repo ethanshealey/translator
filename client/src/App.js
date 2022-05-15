@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react';
 import { Input, Space, Select, Button } from 'antd';
+import { isMobile } from 'react-device-detect';
 
 const { TextArea } = Input
 const { Option } = Select;
@@ -44,16 +45,16 @@ function App() {
   return (
     <div className="container">
       <Space direction="vertical">
-        <Space>
+        <Space direction={isMobile && 'vertical'}>
           <Space direction="vertical">
-            <Select className="select" placeholder="Select a Language" onChange={(e) => setInputLanguage(e)}>
+            <Select open className="select" placeholder="Select a Language" onChange={(e) => setInputLanguage(e)}>
               {
                 languages.map((lang) => {
                   return <Option value={lang.language}>{lang.language_name}</Option>
                 })
               }
             </Select>
-            <TextArea id="input" value={input} onChange={(e) => setInput(e.target.value)} rows={10} onResize={() => null}/>
+            <TextArea id={isMobile ? 'input-mob': 'input'} value={input} onChange={(e) => setInput(e.target.value)} rows={10} onResize={() => null}/>
           </Space>
           <Space direction="vertical">
             <Select className="select" placeholder="Select a Language" onChange={(e) => setOutputLanguage(e)}>
@@ -63,7 +64,7 @@ function App() {
                 })
               }
             </Select>
-            <TextArea id="output" value={output} onChange={() => null} rows={10} />
+            <TextArea id={isMobile ? 'output-mob': 'output'} value={output} onChange={() => null} rows={10} />
           </Space>
         </Space>
       </Space>
