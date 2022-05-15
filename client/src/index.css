@@ -1,0 +1,22 @@
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.container {
+  height: auto;
+}
+#input, #output {
+  width: 35vw;
+  resize: none;
+}
+.button-container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+}
+.select {
+  min-width: 150px;
+}
