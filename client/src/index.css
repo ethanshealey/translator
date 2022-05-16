@@ -17,6 +17,9 @@ body {
 #input-mob, #output-mob {
   width: 80vw;
   resize: none;
+  border: 2px solid #454545 !important;
+  background-color: #2c2c2e !important;
+  color: #b8b8b8 !important;
 }
 .button-container {
   width: 100%;
@@ -27,6 +30,7 @@ body {
 }
 .select {
   min-width: 150px;
+  color: #b8b8b8 !important;
 }
 .ant-select-selector {
   border: 2px solid #454545 !important;
@@ -40,4 +44,15 @@ button[disabled] {
   background-color: #2c2c2e !important;
   border: 1px solid #454545 !important;
   color: #b8b8b8 !important;
+}
+.ant-select-dropdown, .ant-select-dropdown-placement-bottomLeft, .ant-select-dropdown-hidden {
+  background-color: #2c2c2e !important;
+  border: 2px solid #454545 !important;
+  color: #b8b8b8 !important;
+}
+.ant-select-item-option-content {
+  color: #b8b8b8 !important;
+}
+.ant-select-item-option-active, .ant-select-item-option-selected {
+  background-color: #4f4f4f !important;
 }

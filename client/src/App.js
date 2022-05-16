@@ -47,7 +47,7 @@ function App() {
       <Space direction="vertical">
         <Space direction={isMobile && 'vertical'}>
           <Space direction="vertical">
-            <Select open className="select" placeholder="Select a Language" onChange={(e) => setInputLanguage(e)}>
+            <Select className="select" placeholder="Select a Language" onChange={(e) => setInputLanguage(e)}>
               {
                 languages.map((lang) => {
                   return <Option value={lang.language}>{lang.language_name}</Option>
